@@ -1,106 +1,812 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>HouseLabs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="HouseLabs — Charleston's DJ Playground. Play. Learn. Connect. Get Booked."
+  />
   <style>
+    :root {
+      --bg: #07070b;
+      --panel: rgba(255, 255, 255, 0.05);
+      --panel-2: rgba(255, 255, 255, 0.035);
+      --border: rgba(255, 255, 255, 0.1);
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.7);
+      --muted-2: rgba(255, 255, 255, 0.55);
+      --pink: #ec4899;
+      --fuchsia: #d946ef;
+      --orange: #f97316;
+      --shadow: 0 20px 80px rgba(0, 0, 0, 0.35);
+      --radius: 28px;
+      --radius-sm: 20px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #1a0b2e, #050509);
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(168, 85, 247, 0.22), transparent 22%),
+        radial-gradient(circle at 88% 8%, rgba(249, 115, 22, 0.16), transparent 20%),
+        radial-gradient(circle at 50% 100%, rgba(236, 72, 153, 0.10), transparent 24%),
+        linear-gradient(180deg, #09090d 0%, #050509 100%);
+      min-height: 100vh;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topline {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      z-index: 20;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 15;
+      backdrop-filter: blur(14px);
+      background: rgba(7, 7, 11, 0.55);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-box {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      border-radius: 18px;
+      box-shadow: 0 0 50px rgba(255,255,255,0.03);
+      backdrop-filter: blur(14px);
+    }
+
+    .logo-text {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
       color: white;
-      text-align: center;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 18px;
-      color: #ccc;
-      line-height: 1.6;
     }
 
     .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 16px 28px;
-      border-radius: 40px;
-      background: linear-gradient(90deg, #ff00cc, #ff7a00);
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font-weight: 700;
+      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
     }
 
     .btn:hover {
-      transform: scale(1.05);
+      transform: translateY(-1px);
     }
 
-    .section {
-      margin-top: 80px;
+    .btn-primary {
+      color: white;
+      background: linear-gradient(90deg, var(--fuchsia), var(--pink), var(--orange));
+      box-shadow: 0 18px 60px rgba(236, 72, 153, 0.28);
+    }
+
+    .btn-secondary {
+      border-color: rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.92);
+      backdrop-filter: blur(14px);
+    }
+
+    .btn-white {
+      background: white;
+      color: black;
+      font-weight: 700;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 46px;
+      align-items: center;
+      padding: 54px 0 80px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      backdrop-filter: blur(14px);
+    }
+
+    h1 {
+      margin: 18px 0 0;
+      font-size: clamp(3.2rem, 7vw, 5.8rem);
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+      max-width: 760px;
+    }
+
+    .gradient {
+      display: block;
+      background: linear-gradient(90deg, #f0abfc, #f472b6, #fb923c);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy p {
+      max-width: 740px;
+      color: var(--muted);
+      font-size: 1.12rem;
+      line-height: 1.8;
+      margin-top: 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .benefit {
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      border-radius: 20px;
+      padding: 16px;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-card-wrap {
+      position: relative;
+    }
+
+    .hero-card-glow {
+      position: absolute;
+      inset: -14px;
+      border-radius: 32px;
+      background: linear-gradient(135deg, rgba(217,70,239,0.25), transparent, rgba(249,115,22,0.20));
+      filter: blur(30px);
+    }
+
+    .hero-card {
+      position: relative;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.045);
+      border-radius: 32px;
+      padding: 20px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-card-inner {
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 28px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    }
+
+    .hero-card-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .kicker {
+      font-size: 0.92rem;
+      color: var(--muted-2);
+      font-weight: 600;
+    }
+
+    .hero-card-title {
+      margin-top: 10px;
+      font-size: 2rem;
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .pill-live {
+      border-radius: 999px;
+      border: 1px solid rgba(217,70,239,0.2);
+      background: rgba(217,70,239,0.1);
+      color: #f0abfc;
+      padding: 8px 12px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      white-space: nowrap;
+    }
+
+    .mini-stack {
+      margin-top: 26px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .mini-card {
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.22);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .mini-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .num {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--fuchsia), var(--orange));
+    }
+
+    .mini-title {
+      font-size: 0.98rem;
+      font-weight: 700;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: var(--muted-2);
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+
+    .hero-card .btn {
+      width: 100%;
+      margin-top: 22px;
+    }
+
+    section.section {
+      padding: 30px 0 22px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .section-label {
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.74rem;
+      color: rgba(255,255,255,0.42);
+      font-weight: 700;
+    }
+
+    h2 {
+      margin: 12px 0 0;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.06;
+      letter-spacing: -0.04em;
+    }
+
+    .section-sub {
+      color: var(--muted-2);
+      max-width: 560px;
+      line-height: 1.8;
+      font-size: 1rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
     }
 
     .card {
-      background: rgba(255,255,255,0.05);
-      padding: 20px;
-      border-radius: 20px;
-      margin-top: 20px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.045);
+      border-radius: 30px;
+      padding: 26px;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
     }
 
+    .card:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.06);
+      border-color: rgba(255,255,255,0.16);
+    }
+
+    .step-badge,
+    .lane-badge {
+      display: inline-flex;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.65);
+      padding: 7px 12px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.65rem;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 1rem;
+    }
+
+    .lane-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.025));
+      box-shadow: 0 20px 70px rgba(0,0,0,0.2);
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .chip {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.22);
+      padding: 10px 14px;
+      color: rgba(255,255,255,0.82);
+      font-size: 0.92rem;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 24px;
+    }
+
+    .info-box {
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.22);
+      border-radius: 18px;
+      padding: 18px;
+    }
+
+    .info-box h4 {
+      margin: 0;
+      font-size: 1.08rem;
+      letter-spacing: -0.02em;
+    }
+
+    .info-box p {
+      margin: 8px 0 0;
+      color: var(--muted-2);
+      line-height: 1.65;
+      font-size: 0.94rem;
+    }
+
+    .cta-card {
+      background: linear-gradient(135deg, rgba(217,70,239,0.12), rgba(255,255,255,0.03), rgba(249,115,22,0.11));
+    }
+
+    .list {
+      display: grid;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .list-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.22);
+      border-radius: 18px;
+      color: rgba(255,255,255,0.82);
+      font-size: 0.96rem;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #f0abfc, #fb923c);
+      flex: 0 0 auto;
+    }
+
+    footer {
+      padding: 30px 0 60px;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    @media (max-width: 1024px) {
+      .hero,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits,
+      .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      nav {
+        display: none;
+      }
+
+      .nav {
+        padding: 14px 0;
+      }
+
+      .hero {
+        padding: 34px 0 56px;
+      }
+
+      .benefits,
+      .grid-3,
+      .grid-2,
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card-title {
+        font-size: 1.5rem;
+      }
+
+      .hero-copy p,
+      .section-sub {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
-
 <body>
+  <div class="topline"></div>
 
-<div class="container">
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">
+        <div class="logo-box">
+          <div class="logo-text">HouseLabs</div>
+        </div>
+      </a>
 
-  <h1>HouseLabs</h1>
+      <nav>
+        <ul>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#for-djs">For DJs</a></li>
+          <li><a href="#why-houselabs">Why HouseLabs</a></li>
+        </ul>
+      </nav>
 
-  <p><b>Charleston’s DJ Playground</b></p>
-
-  <p>
-    A place where DJs play, learn, connect, and get booked.<br><br>
-    New DJs get real reps. Experienced DJs build influence, test tracks, and get paid.
-  </p>
-
-  <a href="https://tally.so/r/aQ0LPW" class="btn" target="_blank">
-    Apply for HouseLabs
-  </a>
-
-  <div class="section">
-    <h2>How It Works</h2>
-
-    <div class="card">🎧 Play live sets</div>
-    <div class="card">🔥 Get real feedback</div>
-    <div class="card">🚀 Build connections + get booked</div>
-  </div>
-
-  <div class="section">
-    <h2>For DJs</h2>
-
-    <div class="card">
-      <b>New DJs:</b><br>
-      Get experience, confidence, and real stage time
+      <a class="btn btn-white" href="https://tally.so/r/aQ0LPW" target="_blank" rel="noreferrer">
+        Apply Now
+      </a>
     </div>
+  </header>
 
-    <div class="card">
-      <b>Experienced DJs:</b><br>
-      Test tracks, mentor, build your network, and earn
-    </div>
-  </div>
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Charleston’s DJ Playground</div>
 
-</div>
+        <h1>
+          A modern DJ
+          <span class="gradient">launchpad for Charleston.</span>
+        </h1>
 
+        <p>
+          HouseLabs is where new DJs get real reps and seasoned DJs build influence,
+          test tracks, mentor the next wave, and grow industry connections.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://tally.so/r/aQ0LPW" target="_blank" rel="noreferrer">
+            Apply for Founding DJs
+          </a>
+          <a class="btn btn-secondary" href="#how-it-works">
+            Explore the Concept
+          </a>
+        </div>
+
+        <div class="benefits">
+          <div class="benefit">Charleston-focused DJ network</div>
+          <div class="benefit">Open decks and live showcases</div>
+          <div class="benefit">Real-world reps, not just theory</div>
+          <div class="benefit">Industry access and collaboration</div>
+        </div>
+      </div>
+
+      <div class="hero-card-wrap">
+        <div class="hero-card-glow"></div>
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <div class="hero-card-top">
+              <div>
+                <div class="kicker">HouseLabs Live</div>
+                <div class="hero-card-title">Play. Learn. Connect. Get Booked.</div>
+              </div>
+              <div class="pill-live">Live</div>
+            </div>
+
+            <div class="mini-stack">
+              <div class="mini-card">
+                <div class="mini-head">
+                  <div class="num">1</div>
+                  <div class="mini-title">Open Decks</div>
+                </div>
+                <p>A lower-friction way for rising DJs to step into real sets.</p>
+              </div>
+
+              <div class="mini-card">
+                <div class="mini-head">
+                  <div class="num">2</div>
+                  <div class="mini-title">Mentorship</div>
+                </div>
+                <p>Experienced DJs share insight, guidance, and feedback in the room.</p>
+              </div>
+
+              <div class="mini-card">
+                <div class="mini-head">
+                  <div class="num">3</div>
+                  <div class="mini-title">Momentum</div>
+                </div>
+                <p>Build relationships, visibility, and a path toward future bookings.</p>
+              </div>
+            </div>
+
+            <a class="btn btn-white" href="https://tally.so/r/aQ0LPW" target="_blank" rel="noreferrer">
+              Join HouseLabs
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-label">How It Works</div>
+          <h2>Built for real-world DJ growth.</h2>
+        </div>
+        <div class="section-sub">
+          Not just tutorials. Not just networking. HouseLabs is designed to create real reps,
+          useful feedback loops, and the relationships that move DJs forward.
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="step-badge">01</div>
+          <h3>Get In The Room</h3>
+          <p>
+            Apply to join HouseLabs and step into a real DJ ecosystem built around live reps,
+            feedback, and momentum.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="step-badge">02</div>
+          <h3>Play + Improve</h3>
+          <p>
+            Run open-deck sets, test transitions, experiment with tracks, and sharpen your
+            sound in front of real people.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="step-badge">03</div>
+          <h3>Connect + Get Booked</h3>
+          <p>
+            Build relationships with DJs, promoters, venues, and collaborators that can lead
+            to paid opportunities.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="for-djs" class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-label">For DJs</div>
+          <h2>Two lanes. One ecosystem.</h2>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card lane-card">
+          <div class="lane-badge">Start Here</div>
+          <h3>For New DJs</h3>
+          <p>
+            Get live reps, useful feedback, more confidence, and a faster path from bedroom
+            mixes to real sets.
+          </p>
+          <div class="chips">
+            <div class="chip">Open decks</div>
+            <div class="chip">Supportive learning environment</div>
+            <div class="chip">Live performance reps</div>
+          </div>
+        </div>
+
+        <div class="card lane-card">
+          <div class="lane-badge">Lead + Level Up</div>
+          <h3>For Seasoned DJs</h3>
+          <p>
+            Test new sounds, share insight, mentor rising talent, build your network, and
+            unlock paid opportunities.
+          </p>
+          <div class="chips">
+            <div class="chip">Track testing</div>
+            <div class="chip">Industry connections</div>
+            <div class="chip">Paid mentorship / performance potential</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-houselabs" class="section">
+      <div class="why-grid">
+        <div class="card">
+          <div class="section-label">Why HouseLabs</div>
+          <h2>More than a DJ class. More than a group chat.</h2>
+          <p>
+            HouseLabs is a place to practice publicly, experiment safely, meet the right people,
+            and develop in a scene that feels modern, ambitious, and collaborative.
+          </p>
+
+          <div class="info-grid">
+            <div class="info-box">
+              <h4>Open Deck Energy</h4>
+              <p>Accessible enough for new DJs, credible enough for established talent.</p>
+            </div>
+            <div class="info-box">
+              <h4>Industry Adjacency</h4>
+              <p>Connections to the people and rooms that can create real momentum.</p>
+            </div>
+            <div class="info-box">
+              <h4>Creative Testing Ground</h4>
+              <p>A place to try edits, transitions, IDs, and new sounds in the wild.</p>
+            </div>
+            <div class="info-box">
+              <h4>Designed To Scale</h4>
+              <p>Start with Charleston. Grow into a real platform, series, and community.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card cta-card">
+          <div class="section-label">Call To Action</div>
+          <h2>Join the first wave of HouseLabs.</h2>
+          <p>
+            Whether you’re trying to get your first real set or expand your influence in
+            Charleston’s DJ scene, this is the room to be in early.
+          </p>
+
+          <div class="list">
+            <div class="list-item"><span class="dot"></span>Apply as a DJ</div>
+            <div class="list-item"><span class="dot"></span>Get updates on HouseLabs Live</div>
+            <div class="list-item"><span class="dot"></span>Be part of the founding community</div>
+          </div>
+
+          <a class="btn btn-primary" style="margin-top: 24px; width: 100%;" href="https://tally.so/r/aQ0LPW" target="_blank" rel="noreferrer">
+            Apply Through Tally
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      HouseLabs — Charleston’s DJ Playground
+    </footer>
+  </main>
 </body>
 </html>
