@@ -87,17 +87,14 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      flex-shrink: 0;
     }
 
-    .logo-box {
-      padding: 6px 10px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.04);
-      border-radius: 18px;
-      box-shadow: 0 0 50px rgba(255,255,255,0.03);
-      backdrop-filter: blur(14px);
-      display: flex;
-      align-items: center;
+    .brand-logo {
+      height: 88px;
+      width: auto;
+      display: block;
+      filter: drop-shadow(0 0 14px rgba(236,72,153,0.28));
     }
 
     nav ul {
@@ -535,6 +532,10 @@
         padding: 14px 0;
       }
 
+      .brand-logo {
+        height: 68px;
+      }
+
       .hero {
         padding: 34px 0 56px;
       }
@@ -571,9 +572,7 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top">
-        <div class="logo-box">
-          <img src="logo.png" alt="HouseLabs logo" style="height: 64px; width: auto; filter: drop-shadow(0 0 12px rgba(236,72,153,0.35));">
-        </div>
+        <img class="brand-logo" src="logo.png" alt="HouseLabs logo">
       </a>
 
       <nav>
