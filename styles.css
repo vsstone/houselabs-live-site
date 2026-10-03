@@ -1,6 +1,6 @@
 /* =========================================
    HOUSELABS.LIVE V2
-   SECTIONS 1–5
+   COMPLETE HOMEPAGE
 ========================================= */
 
 
@@ -76,9 +76,7 @@ img {
   position: fixed;
   inset: 0;
   z-index: 100;
-
   pointer-events: none;
-
   opacity: 0.035;
 
   background-image:
@@ -94,7 +92,6 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
   z-index: 50;
 
@@ -105,7 +102,6 @@ img {
 .header-inner {
   width: 100%;
   height: 92px;
-
   padding: 0 5vw;
 
   display: flex;
@@ -145,17 +141,14 @@ img {
 
   font-size: 12px;
   font-weight: 700;
-
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
-  transition:
-    color 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .desktop-nav a:not(.nav-button)::after {
   content: "";
-
   position: absolute;
   left: 0;
   bottom: -7px;
@@ -165,8 +158,7 @@ img {
 
   background: var(--gradient);
 
-  transition:
-    width 0.25s ease;
+  transition: width 0.25s ease;
 }
 
 .desktop-nav a:hover {
@@ -176,11 +168,6 @@ img {
 .desktop-nav a:hover::after {
   width: 100%;
 }
-
-
-/* =========================================
-   NAV CTA
-========================================= */
 
 .nav-button {
   padding: 12px 19px;
@@ -217,7 +204,6 @@ img {
 
   border: 0;
   background: transparent;
-
   cursor: pointer;
 }
 
@@ -344,7 +330,6 @@ img {
 
   font-size: 11px;
   font-weight: 700;
-
   letter-spacing: 0.24em;
   text-transform: uppercase;
 
@@ -356,8 +341,7 @@ img {
   display: flex;
   flex-direction: column;
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -367,9 +351,7 @@ img {
     );
 
   font-weight: 700;
-
   line-height: 0.82;
-
   letter-spacing: -0.07em;
 
   text-transform: uppercase;
@@ -381,7 +363,6 @@ img {
 
 .hero-title-gradient {
   display: inline-block;
-
   width: fit-content;
 
   margin-top: 10px;
@@ -405,8 +386,7 @@ img {
 }
 
 .hero-message h2 {
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -416,7 +396,6 @@ img {
     );
 
   font-weight: 600;
-
   letter-spacing: -0.035em;
 }
 
@@ -462,7 +441,6 @@ img {
 
   font-size: 11px;
   font-weight: 700;
-
   letter-spacing: 0.11em;
   text-transform: uppercase;
 
@@ -519,7 +497,6 @@ img {
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 0.17em;
 
   color:
@@ -549,7 +526,6 @@ img {
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 0.18em;
 
   color:
@@ -566,7 +542,7 @@ img {
 
 
 /* =========================================
-   ABOUT / HOUSELABS
+   HOUSELABS IDENTITY
 ========================================= */
 
 .about-section {
@@ -620,7 +596,6 @@ img {
 
   font-size: 10px;
   font-weight: 700;
-
   letter-spacing: 0.22em;
 
   color:
@@ -630,8 +605,7 @@ img {
 .about-headline h2 {
   max-width: 1400px;
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -641,9 +615,7 @@ img {
     );
 
   font-weight: 700;
-
   line-height: 0.88;
-
   letter-spacing: -0.065em;
 
   text-transform: uppercase;
@@ -695,8 +667,7 @@ img {
 .about-lead {
   max-width: 780px;
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -706,9 +677,7 @@ img {
     );
 
   font-weight: 500;
-
   line-height: 1.03;
-
   letter-spacing: -0.05em;
 
   color:
@@ -728,7 +697,6 @@ img {
 
 .about-copy {
   align-self: end;
-
   max-width: 520px;
 }
 
@@ -736,7 +704,6 @@ img {
   margin-bottom: 25px;
 
   font-size: 17px;
-
   line-height: 1.75;
 
   color:
@@ -752,19 +719,15 @@ img {
   display: flex;
   flex-wrap: wrap;
 
-  gap:
-    6px
-    11px;
+  gap: 6px 11px;
 
   margin-top: 46px;
-
   padding-top: 25px;
 
   border-top:
     1px solid var(--line);
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -774,7 +737,6 @@ img {
     );
 
   font-weight: 700;
-
   letter-spacing: -0.035em;
 }
 
@@ -835,7 +797,6 @@ img {
   content: "";
 
   position: absolute;
-
   inset: 0;
 
   opacity: 0;
@@ -862,7 +823,6 @@ img {
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 0.18em;
 
   color:
@@ -875,9 +835,7 @@ img {
 
   margin-top: 42px;
 
-  font-family:
-    var(--font-display);
-
+  font-family: var(--font-display);
   font-size: 35px;
 
   color:
@@ -890,8 +848,7 @@ img {
 
   margin-top: auto;
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -901,7 +858,6 @@ img {
     );
 
   font-weight: 700;
-
   letter-spacing: -0.05em;
 }
 
@@ -914,7 +870,6 @@ img {
   margin-top: 14px;
 
   font-size: 14px;
-
   line-height: 1.6;
 
   color:
@@ -945,7 +900,6 @@ img {
 
   font-size: 10px;
   font-weight: 700;
-
   letter-spacing: 0.25em;
 
   color:
@@ -953,8 +907,7 @@ img {
 }
 
 .opportunity-statement blockquote {
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -964,9 +917,7 @@ img {
     );
 
   font-weight: 600;
-
   line-height: 1;
-
   letter-spacing: -0.06em;
 
   color:
@@ -995,8 +946,7 @@ img {
     6vw
     0;
 
-  background:
-    #09090b;
+  background: #09090b;
 
   border-top:
     1px solid var(--line);
@@ -1031,8 +981,7 @@ img {
 .sessions-title-row h2 {
   max-width: 1000px;
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -1042,9 +991,7 @@ img {
     );
 
   font-weight: 700;
-
   line-height: 0.85;
-
   letter-spacing: -0.065em;
 
   text-transform: uppercase;
@@ -1067,7 +1014,6 @@ img {
   padding-bottom: 7px;
 
   font-size: 17px;
-
   line-height: 1.7;
 
   color:
@@ -1083,7 +1029,6 @@ img {
   position: relative;
 
   min-height: 680px;
-
   max-width: 1500px;
 
   margin: 0 auto;
@@ -1145,9 +1090,7 @@ img {
 .session-placeholder span {
   font-size: 10px;
   font-weight: 700;
-
   line-height: 1.7;
-
   letter-spacing: 0.18em;
 
   text-align: center;
@@ -1159,7 +1102,6 @@ img {
 .session-overlay {
   position: absolute;
   inset: 0;
-
   z-index: 1;
 
   background:
@@ -1181,7 +1123,6 @@ img {
 .session-content {
   position: absolute;
   inset: 0;
-
   z-index: 2;
 
   padding:
@@ -1200,7 +1141,6 @@ img {
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 0.18em;
 
   color:
@@ -1221,7 +1161,6 @@ img {
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 0.19em;
 
   color:
@@ -1229,8 +1168,7 @@ img {
 }
 
 .session-bottom h3 {
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -1240,9 +1178,7 @@ img {
     );
 
   font-weight: 700;
-
   line-height: 0.85;
-
   letter-spacing: -0.065em;
 
   text-transform: uppercase;
@@ -1254,7 +1190,6 @@ img {
   margin-top: 25px;
 
   font-size: 16px;
-
   line-height: 1.65;
 
   color:
@@ -1268,6 +1203,7 @@ img {
   height: 78px;
 
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -1364,7 +1300,6 @@ img {
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 0.18em;
 
   color:
@@ -1424,7 +1359,6 @@ img {
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 0.18em;
 
   color:
@@ -1436,8 +1370,7 @@ img {
 
   margin-top: 60px;
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -1447,9 +1380,7 @@ img {
     );
 
   font-weight: 700;
-
   line-height: 0.95;
-
   letter-spacing: -0.055em;
 
   text-transform: uppercase;
@@ -1461,7 +1392,6 @@ img {
   margin-top: 24px;
 
   font-size: 15px;
-
   line-height: 1.7;
 
   color:
@@ -1499,7 +1429,6 @@ img {
 
   font-size: 8px;
   font-weight: 700;
-
   letter-spacing: 0.22em;
 
   color:
@@ -1518,8 +1447,7 @@ img {
 
   overflow: hidden;
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -1529,7 +1457,6 @@ img {
     );
 
   font-weight: 600;
-
   letter-spacing: -0.02em;
 }
 
@@ -1551,7 +1478,6 @@ img {
 
 
 /* =========================================
-   SECTION 5
    LEARN
 ========================================= */
 
@@ -1568,9 +1494,6 @@ img {
   background:
     var(--black);
 }
-
-
-/* SUBTLE COLOR FIELD */
 
 .learn-section::before {
   content: "";
@@ -1595,11 +1518,6 @@ img {
   pointer-events: none;
 }
 
-
-/* =========================================
-   LEARN HEADER
-========================================= */
-
 .learn-header {
   position: relative;
   z-index: 2;
@@ -1615,8 +1533,7 @@ img {
 .learn-header h2 {
   max-width: 1300px;
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -1626,9 +1543,7 @@ img {
     );
 
   font-weight: 700;
-
   line-height: 0.84;
-
   letter-spacing: -0.07em;
 
   text-transform: uppercase;
@@ -1675,11 +1590,6 @@ img {
     1px solid var(--line);
 }
 
-
-/* =========================================
-   LEARN VISUAL
-========================================= */
-
 .learn-visual {
   min-height: 790px;
 
@@ -1696,7 +1606,6 @@ img {
 
 .learn-visual-placeholder {
   position: absolute;
-
   inset: 0;
 
   display: flex;
@@ -1729,9 +1638,6 @@ img {
       #120d11
     );
 }
-
-
-/* LARGE RECORD / JOG WHEEL */
 
 .deck-circle {
   position: relative;
@@ -1778,7 +1684,6 @@ img {
 
 .deck-circle-inner {
   position: relative;
-
   z-index: 3;
 
   width: 31%;
@@ -1799,8 +1704,7 @@ img {
 }
 
 .deck-circle-inner span {
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -1810,21 +1714,14 @@ img {
     );
 
   font-weight: 700;
-
   letter-spacing: 0.16em;
 }
-
-
-/* =========================================
-   LEARN WAVEFORM
-========================================= */
 
 .learn-waveform {
   position: absolute;
 
   left: 8%;
   right: 8%;
-
   bottom: 80px;
 
   height: 55px;
@@ -1852,53 +1749,18 @@ img {
     );
 }
 
-.learn-waveform i:nth-child(1) {
-  height: 15px;
-}
-
-.learn-waveform i:nth-child(2) {
-  height: 31px;
-}
-
-.learn-waveform i:nth-child(3) {
-  height: 46px;
-}
-
-.learn-waveform i:nth-child(4) {
-  height: 26px;
-}
-
-.learn-waveform i:nth-child(5) {
-  height: 52px;
-}
-
-.learn-waveform i:nth-child(6) {
-  height: 35px;
-}
-
-.learn-waveform i:nth-child(7) {
-  height: 21px;
-}
-
-.learn-waveform i:nth-child(8) {
-  height: 44px;
-}
-
-.learn-waveform i:nth-child(9) {
-  height: 29px;
-}
-
-.learn-waveform i:nth-child(10) {
-  height: 50px;
-}
-
-.learn-waveform i:nth-child(11) {
-  height: 32px;
-}
-
-.learn-waveform i:nth-child(12) {
-  height: 17px;
-}
+.learn-waveform i:nth-child(1) { height: 15px; }
+.learn-waveform i:nth-child(2) { height: 31px; }
+.learn-waveform i:nth-child(3) { height: 46px; }
+.learn-waveform i:nth-child(4) { height: 26px; }
+.learn-waveform i:nth-child(5) { height: 52px; }
+.learn-waveform i:nth-child(6) { height: 35px; }
+.learn-waveform i:nth-child(7) { height: 21px; }
+.learn-waveform i:nth-child(8) { height: 44px; }
+.learn-waveform i:nth-child(9) { height: 29px; }
+.learn-waveform i:nth-child(10) { height: 50px; }
+.learn-waveform i:nth-child(11) { height: 32px; }
+.learn-waveform i:nth-child(12) { height: 17px; }
 
 .learn-visual-placeholder > p {
   position: absolute;
@@ -1908,7 +1770,6 @@ img {
 
   font-size: 8px;
   font-weight: 700;
-
   letter-spacing: 0.22em;
 
   color:
@@ -1942,7 +1803,6 @@ img {
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 0.2em;
 
   color:
@@ -1952,8 +1812,7 @@ img {
 .learn-content h3 {
   max-width: 650px;
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -1963,9 +1822,7 @@ img {
     );
 
   font-weight: 700;
-
   line-height: 0.9;
-
   letter-spacing: -0.06em;
 
   text-transform: uppercase;
@@ -1993,17 +1850,11 @@ img {
   margin-top: 35px;
 
   font-size: 17px;
-
   line-height: 1.75;
 
   color:
     rgba(255, 255, 255, 0.62);
 }
-
-
-/* =========================================
-   LEARNING PATHS
-========================================= */
 
 .learn-paths {
   margin-top: 52px;
@@ -2034,7 +1885,6 @@ img {
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 0.14em;
 
   color:
@@ -2042,12 +1892,10 @@ img {
 }
 
 .learn-path h4 {
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size: 16px;
   font-weight: 700;
-
   letter-spacing: -0.02em;
 }
 
@@ -2057,21 +1905,14 @@ img {
   margin-top: 6px;
 
   font-size: 13px;
-
   line-height: 1.55;
 
   color:
     rgba(255, 255, 255, 0.46);
 }
 
-
-/* =========================================
-   LEARN CTA
-========================================= */
-
 .learn-cta {
   width: 100%;
-
   min-height: 68px;
 
   margin-top: 35px;
@@ -2090,7 +1931,6 @@ img {
 
   font-size: 10px;
   font-weight: 700;
-
   letter-spacing: 0.16em;
 
   transition:
@@ -2163,7 +2003,6 @@ img {
 
   font-size: 9px;
   font-weight: 700;
-
   letter-spacing: 0.2em;
 
   color:
@@ -2173,8 +2012,7 @@ img {
 .mentor-statement p {
   max-width: 900px;
 
-  font-family:
-    var(--font-display);
+  font-family: var(--font-display);
 
   font-size:
     clamp(
@@ -2184,9 +2022,7 @@ img {
     );
 
   font-weight: 600;
-
   line-height: 0.96;
-
   letter-spacing: -0.06em;
 }
 
@@ -2212,11 +2048,780 @@ img {
   max-width: 250px;
 
   font-size: 14px;
-
   line-height: 1.65;
 
   color:
     rgba(255, 255, 255, 0.48);
+}
+
+
+/* =========================================
+   MANIFESTO
+========================================= */
+
+.manifesto-section {
+  position: relative;
+
+  padding:
+    155px
+    6vw
+    150px;
+
+  overflow: hidden;
+
+  background:
+    #08080a;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.manifesto-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 850px;
+  height: 850px;
+
+  right: -420px;
+  top: 150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 48, 79, 0.10),
+      transparent 67%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   MANIFESTO TOP
+========================================= */
+
+.manifesto-top {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+.manifesto-side-note {
+  padding-top: 2px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+
+  color:
+    rgba(255, 255, 255, 0.30);
+}
+
+
+/* =========================================
+   MANIFESTO HERO
+========================================= */
+
+.manifesto-hero {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1500px;
+
+  margin:
+    90px
+    auto
+    0;
+}
+
+.manifesto-hero h2 {
+  max-width: 1400px;
+
+  font-family: var(--font-display);
+
+  font-size:
+    clamp(
+      70px,
+      10vw,
+      165px
+    );
+
+  font-weight: 700;
+  line-height: 0.78;
+  letter-spacing: -0.075em;
+
+  text-transform: uppercase;
+}
+
+.manifesto-hero h2 span {
+  display: block;
+
+  margin-top: 16px;
+
+  padding-right: 0.05em;
+
+  width: fit-content;
+
+  background:
+    var(--gradient);
+
+  -webkit-background-clip:
+    text;
+
+  background-clip:
+    text;
+
+  color:
+    transparent;
+}
+
+.manifesto-hero h2 strong {
+  display: inline-block;
+
+  margin-top: 22px;
+
+  font-size: 0.55em;
+  font-weight: 700;
+
+  color: var(--red);
+}
+
+.manifesto-opening {
+  margin-top: 45px;
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(
+      23px,
+      2.4vw,
+      38px
+    );
+
+  font-weight: 500;
+  letter-spacing: -0.035em;
+
+  color:
+    rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================
+   MANIFESTO BODY
+========================================= */
+
+.manifesto-body {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1500px;
+
+  margin:
+    120px
+    auto
+    0;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(300px, 0.65fr);
+
+  gap: 10vw;
+
+  padding-top: 80px;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.manifesto-principles p {
+  max-width: 900px;
+
+  margin-bottom: 40px;
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(
+      30px,
+      4vw,
+      62px
+    );
+
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.05em;
+
+  color:
+    rgba(255, 255, 255, 0.77);
+}
+
+.manifesto-principles span {
+  color: var(--white);
+}
+
+.manifesto-principles p:last-child span {
+  background:
+    var(--gradient);
+
+  -webkit-background-clip:
+    text;
+
+  background-clip:
+    text;
+
+  color:
+    transparent;
+}
+
+
+/* =========================================
+   COMMUNITY OVER COMPETITION
+========================================= */
+
+.manifesto-community {
+  align-self: end;
+
+  padding-left: 30px;
+
+  border-left:
+    1px solid var(--line);
+}
+
+.manifesto-label {
+  margin-bottom: 32px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  color:
+    rgba(255, 255, 255, 0.75);
+}
+
+.manifesto-actions {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.manifesto-actions span {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.09em;
+
+  color:
+    rgba(255, 255, 255, 0.39);
+}
+
+
+/* =========================================
+   MANIFESTO SIGNATURE
+========================================= */
+
+.manifesto-signature {
+  position: relative;
+  z-index: 2;
+
+  max-width: 1500px;
+
+  margin:
+    145px
+    auto
+    0;
+
+  padding-top: 45px;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top:
+    1px solid var(--line);
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(
+      45px,
+      7.2vw,
+      115px
+    );
+
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+}
+
+.manifesto-signature span:last-child {
+  background:
+    var(--gradient);
+
+  -webkit-background-clip:
+    text;
+
+  background-clip:
+    text;
+
+  color:
+    transparent;
+}
+
+
+/* =========================================
+   COME PLAY
+========================================= */
+
+.join-section {
+  position: relative;
+
+  min-height: 92vh;
+
+  padding:
+    150px
+    6vw;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    #050505;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.join-section::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+
+    linear-gradient(
+      125deg,
+      rgba(236, 0, 140, 0.08),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      310deg,
+      rgba(255, 157, 0, 0.08),
+      transparent 35%
+    );
+
+  pointer-events: none;
+}
+
+.join-glow {
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(236, 0, 140, 0.13),
+      rgba(255, 48, 79, 0.05) 34%,
+      transparent 68%
+    );
+
+  filter:
+    blur(10px);
+
+  pointer-events: none;
+}
+
+.join-inner {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1450px;
+
+  text-align: center;
+}
+
+.join-kicker {
+  margin-bottom: 50px;
+
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+
+  color:
+    rgba(255, 255, 255, 0.38);
+}
+
+
+/* =========================================
+   COME PLAY HEADLINE
+========================================= */
+
+.join-inner h2 {
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(
+      100px,
+      16vw,
+      260px
+    );
+
+  font-weight: 700;
+  line-height: 0.70;
+  letter-spacing: -0.085em;
+
+  text-transform: uppercase;
+}
+
+.join-inner h2 span {
+  display: block;
+
+  margin-top: 40px;
+
+  padding-right: 0.06em;
+
+  background:
+    var(--gradient);
+
+  -webkit-background-clip:
+    text;
+
+  background-clip:
+    text;
+
+  color:
+    transparent;
+}
+
+
+/* =========================================
+   JOIN TYPES
+========================================= */
+
+.join-types {
+  margin:
+    85px
+    auto
+    0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap:
+    13px
+    17px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+
+  color:
+    rgba(255, 255, 255, 0.42);
+}
+
+.join-types i {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background:
+    var(--red);
+}
+
+
+/* =========================================
+   JOIN MESSAGE
+========================================= */
+
+.join-message {
+  max-width: 760px;
+
+  margin:
+    50px
+    auto
+    0;
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(
+      26px,
+      3.4vw,
+      50px
+    );
+
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+
+  color:
+    rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================
+   JOIN BUTTON
+========================================= */
+
+.join-button {
+  width:
+    min(100%, 610px);
+
+  min-height: 92px;
+
+  margin:
+    55px
+    auto
+    0;
+
+  padding:
+    0
+    34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 999px;
+
+  background:
+    var(--gradient);
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+
+  box-shadow:
+    0 20px 80px rgba(236, 0, 140, 0.16);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.join-button:hover {
+  transform:
+    translateY(-4px);
+
+  box-shadow:
+    0 25px 100px rgba(236, 0, 140, 0.27);
+}
+
+.join-button-arrow {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0, 0, 0, 0.20);
+
+  font-size: 24px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.join-button:hover .join-button-arrow {
+  transform:
+    translate(4px, -4px);
+}
+
+.join-note {
+  margin-top: 34px;
+
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.23em;
+
+  color:
+    rgba(255, 255, 255, 0.28);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+  padding:
+    80px
+    6vw
+    35px;
+
+  background:
+    #08080a;
+
+  border-top:
+    1px solid var(--line);
+}
+
+.footer-top {
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 60px;
+
+  padding-bottom: 75px;
+}
+
+.footer-brand {
+  max-width: 420px;
+}
+
+.footer-logo {
+  display: block;
+
+  width: 220px;
+
+  margin-bottom: 28px;
+}
+
+.footer-logo img {
+  width: 100%;
+}
+
+.footer-brand p {
+  font-family:
+    var(--font-display);
+
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+
+.footer-brand > span {
+  display: block;
+
+  margin-top: 8px;
+
+  font-size: 13px;
+
+  color:
+    rgba(255, 255, 255, 0.48);
+}
+
+.footer-links {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 17px;
+}
+
+.footer-links a {
+  position: relative;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  color:
+    rgba(255, 255, 255, 0.55);
+
+  transition:
+    color 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-links a:last-child {
+  margin-top: 7px;
+
+  color:
+    var(--white);
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  padding-top: 25px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  border-top:
+    1px solid var(--line);
+
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  color:
+    rgba(255, 255, 255, 0.25);
 }
 
 
@@ -2247,7 +2852,6 @@ img {
 
   .mobile-menu-button {
     display: block;
-
     z-index: 60;
   }
 
@@ -2256,9 +2860,7 @@ img {
 
   .mobile-nav {
     position: fixed;
-
     inset: 0;
-
     z-index: 55;
 
     display: flex;
@@ -2306,8 +2908,7 @@ img {
       14px
       22px;
 
-    border-radius:
-      999px;
+    border-radius: 999px;
 
     background:
       var(--gradient);
@@ -2321,8 +2922,7 @@ img {
     letter-spacing:
       0.05em !important;
 
-    text-transform:
-      uppercase;
+    text-transform: uppercase;
   }
 
   .mobile-menu-button.active span:first-child {
@@ -2594,9 +3194,7 @@ img {
   }
 
 
-  /* =====================================
-     LEARN
-  ====================================== */
+  /* LEARN */
 
   .learn-section {
     padding:
@@ -2661,8 +3259,119 @@ img {
     gap: 35px;
   }
 
-  .mentor-statement p {
-    max-width: 700px;
+
+  /* MANIFESTO */
+
+  .manifesto-section {
+    padding:
+      105px
+      20px
+      100px;
+  }
+
+  .manifesto-top {
+    display: block;
+  }
+
+  .manifesto-side-note {
+    margin-bottom: 25px;
+  }
+
+  .manifesto-hero {
+    margin-top: 65px;
+  }
+
+  .manifesto-hero h2 {
+    font-size:
+      clamp(
+        65px,
+        16vw,
+        120px
+      );
+  }
+
+  .manifesto-body {
+    margin-top: 90px;
+
+    padding-top: 60px;
+
+    grid-template-columns: 1fr;
+
+    gap: 70px;
+  }
+
+  .manifesto-community {
+    padding-left: 0;
+
+    padding-top: 35px;
+
+    border-left: none;
+
+    border-top:
+      1px solid var(--line);
+  }
+
+  .manifesto-signature {
+    margin-top: 100px;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    font-size:
+      clamp(
+        55px,
+        13vw,
+        95px
+      );
+  }
+
+
+  /* JOIN */
+
+  .join-section {
+    min-height: auto;
+
+    padding:
+      130px
+      20px;
+  }
+
+  .join-inner h2 {
+    font-size:
+      clamp(
+        90px,
+        24vw,
+        180px
+      );
+  }
+
+  .join-inner h2 span {
+    margin-top: 30px;
+  }
+
+  .join-types {
+    margin-top: 65px;
+  }
+
+
+  /* FOOTER */
+
+  .site-footer {
+    padding:
+      65px
+      20px
+      30px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+
+    padding-bottom: 55px;
+  }
+
+  .footer-links {
+    align-items: flex-start;
   }
 
 }
@@ -2673,6 +3382,9 @@ img {
 ========================================= */
 
 @media (max-width: 560px) {
+
+
+  /* HERO */
 
   .hero-title {
     font-size: 15vw;
@@ -2799,9 +3511,7 @@ img {
   }
 
 
-  /* =====================================
-     LEARN MOBILE
-  ====================================== */
+  /* LEARN */
 
   .learn-header h2 {
     font-size: 13.5vw;
@@ -2842,7 +3552,6 @@ img {
 
   .learn-intro {
     font-size: 16px;
-
     line-height: 1.7;
   }
 
@@ -2865,6 +3574,122 @@ img {
 
   .mentor-statement p {
     font-size: 12vw;
+  }
+
+
+  /* MANIFESTO */
+
+  .manifesto-section {
+    padding-top: 90px;
+  }
+
+  .manifesto-hero {
+    margin-top: 50px;
+  }
+
+  .manifesto-hero h2 {
+    font-size: 17vw;
+    line-height: 0.82;
+  }
+
+  .manifesto-opening {
+    margin-top: 35px;
+
+    font-size: 23px;
+  }
+
+  .manifesto-body {
+    margin-top: 70px;
+
+    padding-top: 45px;
+
+    gap: 55px;
+  }
+
+  .manifesto-principles p {
+    margin-bottom: 30px;
+
+    font-size: 9.5vw;
+  }
+
+  .manifesto-signature {
+    margin-top: 80px;
+
+    padding-top: 35px;
+
+    font-size: 13vw;
+  }
+
+
+  /* COME PLAY */
+
+  .join-section {
+    padding:
+      110px
+      20px;
+  }
+
+  .join-kicker {
+    margin-bottom: 45px;
+
+    line-height: 1.6;
+  }
+
+  .join-inner h2 {
+    font-size: 26vw;
+    line-height: 0.73;
+  }
+
+  .join-inner h2 span {
+    margin-top: 24px;
+  }
+
+  .join-types {
+    margin-top: 55px;
+
+    gap:
+      10px
+      12px;
+
+    font-size: 8px;
+  }
+
+  .join-message {
+    margin-top: 42px;
+
+    font-size: 27px;
+  }
+
+  .join-button {
+    min-height: 76px;
+
+    margin-top: 45px;
+
+    padding:
+      0
+      18px
+      0
+      25px;
+
+    font-size: 11px;
+  }
+
+  .join-button-arrow {
+    width: 45px;
+    height: 45px;
+  }
+
+
+  /* FOOTER */
+
+  .footer-logo {
+    width: 185px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+
+    gap: 12px;
   }
 
 }
