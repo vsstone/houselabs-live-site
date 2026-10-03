@@ -1,7 +1,6 @@
 /* =========================================
    HOUSELABS.LIVE V2
-   SECTIONS 1–3
-   FOUNDATION / NAV / HERO / IDENTITY
+   SECTIONS 1–4
 ========================================= */
 
 
@@ -76,8 +75,10 @@ img {
 .site-noise {
   position: fixed;
   inset: 0;
-  pointer-events: none;
   z-index: 100;
+
+  pointer-events: none;
+
   opacity: 0.035;
 
   background-image:
@@ -91,9 +92,12 @@ img {
 
 .site-header {
   position: absolute;
+
   top: 0;
   left: 0;
+
   width: 100%;
+
   z-index: 50;
 
   border-bottom:
@@ -103,6 +107,7 @@ img {
 .header-inner {
   width: 100%;
   height: 92px;
+
   padding: 0 5vw;
 
   display: flex;
@@ -117,23 +122,26 @@ img {
 
 .site-logo {
   display: block;
+
   width: 190px;
 }
 
 .site-logo img {
   display: block;
+
   width: 100%;
   height: auto;
 }
 
 
 /* =========================================
-   DESKTOP NAVIGATION
+   DESKTOP NAV
 ========================================= */
 
 .desktop-nav {
   display: flex;
   align-items: center;
+
   gap: 30px;
 }
 
@@ -142,16 +150,20 @@ img {
 
   font-size: 12px;
   font-weight: 700;
+
   letter-spacing: 0.1em;
+
   text-transform: uppercase;
 
-  transition: color 0.2s ease;
+  transition:
+    color 0.2s ease;
 }
 
 .desktop-nav a:not(.nav-button)::after {
   content: "";
 
   position: absolute;
+
   left: 0;
   bottom: -7px;
 
@@ -160,7 +172,8 @@ img {
 
   background: var(--gradient);
 
-  transition: width 0.25s ease;
+  transition:
+    width 0.25s ease;
 }
 
 .desktop-nav a:hover {
@@ -192,13 +205,15 @@ img {
 
 .nav-button:hover {
   background: var(--gradient);
+
   border-color: transparent;
+
   transform: translateY(-1px);
 }
 
 
 /* =========================================
-   MOBILE MENU BUTTON
+   MOBILE MENU
 ========================================= */
 
 .mobile-menu-button {
@@ -210,6 +225,7 @@ img {
   position: relative;
 
   border: 0;
+
   background: transparent;
 
   cursor: pointer;
@@ -217,6 +233,7 @@ img {
 
 .mobile-menu-button span {
   position: absolute;
+
   left: 10px;
 
   width: 22px;
@@ -262,26 +279,27 @@ img {
     11vh;
 }
 
-
-/* =========================================
-   HERO BACKGROUND
-========================================= */
-
 .hero-background {
   position: absolute;
+
   inset: 0;
+
   z-index: 0;
 }
 
 
-/* REAL HOUSELABS FOUNDING ROUNDTABLE */
+/* =========================================
+   HERO PHOTO
+========================================= */
 
 .hero-photo {
   background-image:
     url("assets/IMG_4067.jpeg");
 
   background-size: cover;
+
   background-position: center 42%;
+
   background-repeat: no-repeat;
 
   transform: scale(1.015);
@@ -294,7 +312,9 @@ img {
 
 .hero-overlay {
   position: absolute;
+
   inset: 0;
+
   z-index: 1;
 
   background:
@@ -323,6 +343,7 @@ img {
 
 .hero-glow {
   position: absolute;
+
   z-index: 1;
 
   width: 700px;
@@ -350,9 +371,11 @@ img {
 
 .hero-content {
   position: relative;
+
   z-index: 3;
 
   width: 100%;
+
   max-width: 1200px;
 }
 
@@ -361,24 +384,22 @@ img {
 
   font-size: 11px;
   font-weight: 700;
+
   letter-spacing: 0.24em;
+
   text-transform: uppercase;
 
-  color: rgba(255, 255, 255, 0.72);
+  color:
+    rgba(255, 255, 255, 0.72);
 }
-
-
-/* =========================================
-   HERO TITLE
-========================================= */
 
 .hero-title {
   display: flex;
+
   flex-direction: column;
 
-  margin: 0;
-
-  font-family: var(--font-display);
+  font-family:
+    var(--font-display);
 
   font-size:
     clamp(
@@ -412,6 +433,7 @@ img {
   background: var(--gradient);
 
   -webkit-background-clip: text;
+
   background-clip: text;
 
   color: transparent;
@@ -427,9 +449,8 @@ img {
 }
 
 .hero-message h2 {
-  margin: 0;
-
-  font-family: var(--font-display);
+  font-family:
+    var(--font-display);
 
   font-size:
     clamp(
@@ -444,7 +465,7 @@ img {
 }
 
 .hero-message .heart {
-  color: #ff304f;
+  color: var(--red);
 }
 
 .hero-message p {
@@ -452,17 +473,20 @@ img {
 
   font-size: 18px;
 
-  color: rgba(255, 255, 255, 0.66);
+  color:
+    rgba(255, 255, 255, 0.66);
 }
 
 
 /* =========================================
-   HERO BUTTONS
+   HERO ACTIONS
 ========================================= */
 
 .hero-actions {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
 
   margin-top: 32px;
@@ -472,6 +496,7 @@ img {
   min-height: 50px;
 
   display: inline-flex;
+
   align-items: center;
   justify-content: center;
 
@@ -497,6 +522,7 @@ img {
 
 .hero-button-primary {
   background: var(--gradient);
+
   color: white;
 }
 
@@ -519,22 +545,25 @@ img {
 
 .hero-button-secondary:hover {
   background: white;
+
   color: black;
 }
 
 
 /* =========================================
-   HERO BOTTOM LANGUAGE
+   HERO BOTTOM
 ========================================= */
 
 .hero-bottom {
   position: absolute;
+
   z-index: 3;
 
   left: 6vw;
   bottom: 32px;
 
   display: flex;
+
   align-items: center;
 
   gap: 13px;
@@ -544,7 +573,8 @@ img {
 
   letter-spacing: 0.17em;
 
-  color: rgba(255, 255, 255, 0.45);
+  color:
+    rgba(255, 255, 255, 0.45);
 }
 
 .hero-dot {
@@ -553,22 +583,19 @@ img {
 
   border-radius: 50%;
 
-  background: #ff304f;
+  background: var(--red);
 }
-
-
-/* =========================================
-   HERO SCROLL
-========================================= */
 
 .hero-scroll {
   position: absolute;
+
   z-index: 3;
 
   right: 5vw;
   bottom: 30px;
 
   display: flex;
+
   align-items: center;
 
   gap: 15px;
@@ -578,7 +605,8 @@ img {
 
   letter-spacing: 0.18em;
 
-  color: rgba(255, 255, 255, 0.55);
+  color:
+    rgba(255, 255, 255, 0.55);
 }
 
 .hero-scroll-line {
@@ -605,12 +633,8 @@ img {
 
   overflow: hidden;
 
-  background:
-    var(--black);
+  background: var(--black);
 }
-
-
-/* SUBTLE BACKGROUND GLOW */
 
 .about-section::before {
   content: "";
@@ -642,6 +666,7 @@ img {
 
 .about-intro {
   position: relative;
+
   z-index: 2;
 
   padding-bottom: 90px;
@@ -684,9 +709,6 @@ img {
   text-transform: uppercase;
 }
 
-
-/* OUTLINE LABORATORY */
-
 .outline-word {
   color: transparent;
 
@@ -694,25 +716,18 @@ img {
     1.5px rgba(255, 255, 255, 0.55);
 }
 
-
-/* GRADIENT PLAYGROUND */
-
 .gradient-word {
   display: inline-block;
 
   padding-right: 0.05em;
 
-  background:
-    var(--gradient);
+  background: var(--gradient);
 
-  -webkit-background-clip:
-    text;
+  -webkit-background-clip: text;
 
-  background-clip:
-    text;
+  background-clip: text;
 
-  color:
-    transparent;
+  color: transparent;
 }
 
 
@@ -722,6 +737,7 @@ img {
 
 .about-grid {
   position: relative;
+
   z-index: 2;
 
   display: grid;
@@ -737,9 +753,6 @@ img {
     0
     110px;
 }
-
-
-/* LEFT STATEMENT */
 
 .about-lead {
   max-width: 780px;
@@ -767,21 +780,14 @@ img {
 .about-lead strong {
   font-weight: 600;
 
-  background:
-    var(--gradient);
+  background: var(--gradient);
 
-  -webkit-background-clip:
-    text;
+  -webkit-background-clip: text;
 
-  background-clip:
-    text;
+  background-clip: text;
 
-  color:
-    transparent;
+  color: transparent;
 }
-
-
-/* RIGHT COPY */
 
 .about-copy {
   align-self: end;
@@ -807,16 +813,15 @@ img {
 
 
 /* =========================================
-   INDEPENDENT. TOGETHER.
+   INDEPENDENT TOGETHER
 ========================================= */
 
 .about-signature {
   display: flex;
+
   flex-wrap: wrap;
 
-  gap:
-    6px
-    11px;
+  gap: 6px 11px;
 
   margin-top: 46px;
 
@@ -841,17 +846,13 @@ img {
 }
 
 .signature-gradient {
-  background:
-    var(--gradient);
+  background: var(--gradient);
 
-  -webkit-background-clip:
-    text;
+  -webkit-background-clip: text;
 
-  background-clip:
-    text;
+  background-clip: text;
 
-  color:
-    transparent;
+  color: transparent;
 }
 
 
@@ -861,6 +862,7 @@ img {
 
 .philosophy-grid {
   position: relative;
+
   z-index: 2;
 
   display: grid;
@@ -874,11 +876,6 @@ img {
   border-bottom:
     1px solid var(--line);
 }
-
-
-/* =========================================
-   PHILOSOPHY CARD
-========================================= */
 
 .philosophy-card {
   position: relative;
@@ -907,9 +904,6 @@ img {
   border-right: none;
 }
 
-
-/* COLOR HOVER */
-
 .philosophy-card::before {
   content: "";
 
@@ -920,7 +914,6 @@ img {
   opacity: 0;
 
   background:
-
     linear-gradient(
       145deg,
       rgba(236, 0, 140, 0.11),
@@ -936,11 +929,9 @@ img {
   opacity: 1;
 }
 
-
-/* CARD NUMBER */
-
 .card-number {
   position: relative;
+
   z-index: 2;
 
   font-size: 9px;
@@ -952,11 +943,9 @@ img {
     rgba(255, 255, 255, 0.30);
 }
 
-
-/* CARD ICON */
-
 .card-icon {
   position: relative;
+
   z-index: 2;
 
   margin-top: 42px;
@@ -970,11 +959,9 @@ img {
     rgba(255, 255, 255, 0.70);
 }
 
-
-/* CARD TITLE */
-
 .philosophy-card h3 {
   position: relative;
+
   z-index: 2;
 
   margin-top: auto;
@@ -994,11 +981,9 @@ img {
   letter-spacing: -0.05em;
 }
 
-
-/* CARD COPY */
-
 .philosophy-card p {
   position: relative;
+
   z-index: 2;
 
   max-width: 240px;
@@ -1020,6 +1005,7 @@ img {
 
 .opportunity-statement {
   position: relative;
+
   z-index: 2;
 
   max-width: 1250px;
@@ -1066,17 +1052,634 @@ img {
 }
 
 .opportunity-statement blockquote span {
+  background: var(--gradient);
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+/* =========================================
+   SECTION 4
+   WHAT'S HAPPENING
+========================================= */
+
+.sessions-section {
+  position: relative;
+
+  padding:
+    145px
+    6vw
+    0;
+
+  background:
+    #09090b;
+
+  border-top:
+    1px solid var(--line);
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   SESSIONS HEADER
+========================================= */
+
+.sessions-header {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1500px;
+
+  margin: 0 auto 80px;
+}
+
+.sessions-title-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(280px, 0.5fr);
+
+  align-items: end;
+
+  gap: 8vw;
+}
+
+.sessions-title-row h2 {
+  max-width: 1000px;
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(
+      58px,
+      8vw,
+      130px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.065em;
+
+  text-transform: uppercase;
+}
+
+.sessions-title-row h2 span {
+  display: block;
+
+  background: var(--gradient);
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
+}
+
+.sessions-title-row > p {
+  max-width: 410px;
+
+  padding-bottom: 7px;
+
+  font-size: 17px;
+
+  line-height: 1.7;
+
+  color:
+    rgba(255, 255, 255, 0.58);
+}
+
+
+/* =========================================
+   MAIN SESSION FEATURE
+========================================= */
+
+.session-feature {
+  position: relative;
+
+  min-height: 680px;
+
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border:
+    1px solid var(--line);
+
+  background:
+    var(--black-light);
+}
+
+.session-image {
+  position: absolute;
+
+  inset: 0;
+
+  background-size: cover;
+
+  background-position: center;
+
+  transition:
+    transform 0.8s
+    cubic-bezier(.2, .7, .2, 1);
+}
+
+.session-feature:hover .session-image {
+  transform: scale(1.025);
+}
+
+
+/* =========================================
+   TEMPORARY SESSION PHOTO PLACEHOLDER
+========================================= */
+
+.session-placeholder {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background:
+
+    radial-gradient(
+      circle at 75% 25%,
+      rgba(255, 157, 0, 0.18),
+      transparent 25%
+    ),
+
+    radial-gradient(
+      circle at 25% 70%,
+      rgba(236, 0, 140, 0.17),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #19151c,
+      #080809 55%,
+      #171216
+    );
+}
+
+.session-placeholder span {
+  font-size: 10px;
+  font-weight: 700;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.18em;
+
+  text-align: center;
+
+  color:
+    rgba(255, 255, 255, 0.22);
+}
+
+
+/* =========================================
+   SESSION OVERLAY
+========================================= */
+
+.session-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.45) 48%,
+      rgba(0, 0, 0, 0.12) 100%
+    ),
+
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.35),
+      transparent 65%
+    );
+}
+
+
+/* =========================================
+   SESSION CONTENT
+========================================= */
+
+.session-content {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 2;
+
+  padding: 35px 40px 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.session-top {
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  color:
+    rgba(255, 255, 255, 0.55);
+}
+
+.session-bottom {
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 50px;
+}
+
+.session-eyebrow {
+  margin-bottom: 15px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.19em;
+
+  color:
+    rgba(255, 255, 255, 0.46);
+}
+
+.session-bottom h3 {
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(
+      58px,
+      8vw,
+      125px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.065em;
+
+  text-transform: uppercase;
+}
+
+.session-description {
+  max-width: 470px;
+
+  margin-top: 25px;
+
+  font-size: 16px;
+
+  line-height: 1.65;
+
+  color:
+    rgba(255, 255, 255, 0.63);
+}
+
+
+/* =========================================
+   ROUND CTA
+========================================= */
+
+.circle-link {
+  flex-shrink: 0;
+
+  width: 78px;
+  height: 78px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.45);
+
+  border-radius: 50%;
+
+  font-size: 28px;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.circle-link:hover {
+  transform:
+    rotate(45deg);
+
   background:
     var(--gradient);
 
-  -webkit-background-clip:
-    text;
+  border-color:
+    transparent;
+}
 
-  background-clip:
-    text;
+
+/* =========================================
+   SECONDARY EXPERIENCES
+========================================= */
+
+.session-secondary-grid {
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  border-left:
+    1px solid var(--line);
+
+  border-right:
+    1px solid var(--line);
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+.session-card {
+  min-width: 0;
+
+  border-right:
+    1px solid var(--line);
+}
+
+.session-card:last-child {
+  border-right: none;
+}
+
+
+/* =========================================
+   SECONDARY IMAGE
+========================================= */
+
+.session-card-image {
+  position: relative;
+
+  height: 390px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-bottom:
+    1px solid var(--line);
+}
+
+.session-card-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.42),
+      transparent 70%
+    );
+}
+
+.session-card-image span {
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
 
   color:
-    transparent;
+    rgba(255, 255, 255, 0.22);
+}
+
+
+/* =========================================
+   ROUNDTABLE PLACEHOLDER
+========================================= */
+
+.roundtable-placeholder {
+  background:
+
+    radial-gradient(
+      circle at 25% 25%,
+      rgba(236, 0, 140, 0.16),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      145deg,
+      #171218,
+      #09090a 60%,
+      #111014
+    );
+}
+
+
+/* =========================================
+   EVENT PLACEHOLDER
+========================================= */
+
+.event-placeholder {
+  background:
+
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(255, 157, 0, 0.17),
+      transparent 28%
+    ),
+
+    linear-gradient(
+      135deg,
+      #121216,
+      #080809 60%,
+      #17120e
+    );
+}
+
+
+/* =========================================
+   SECONDARY CARD COPY
+========================================= */
+
+.session-card-copy {
+  position: relative;
+
+  min-height: 360px;
+
+  padding:
+    35px
+    38px
+    45px;
+}
+
+.session-card-number {
+  position: absolute;
+
+  top: 35px;
+  right: 38px;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+
+  color:
+    rgba(255, 255, 255, 0.26);
+}
+
+.session-card-copy h3 {
+  max-width: 560px;
+
+  margin-top: 60px;
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(
+      35px,
+      4vw,
+      65px
+    );
+
+  font-weight: 700;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+
+  text-transform: uppercase;
+}
+
+.session-card-copy > p:last-child {
+  max-width: 480px;
+
+  margin-top: 24px;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color:
+    rgba(255, 255, 255, 0.54);
+}
+
+
+/* =========================================
+   HOUSELABS PULSE
+========================================= */
+
+.sessions-pulse {
+  margin:
+    120px
+    -6vw
+    0;
+
+  padding:
+    25px
+    6vw
+    27px;
+
+  border-top:
+    1px solid var(--line);
+
+  border-bottom:
+    1px solid var(--line);
+
+  background:
+    var(--black);
+}
+
+.pulse-label {
+  margin-bottom: 19px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.22em;
+
+  color:
+    rgba(255, 255, 255, 0.28);
+}
+
+.pulse-track {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 25px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  font-family:
+    var(--font-display);
+
+  font-size:
+    clamp(
+      16px,
+      1.6vw,
+      25px
+    );
+
+  font-weight: 600;
+
+  letter-spacing: -0.02em;
+}
+
+.pulse-track span {
+  color:
+    rgba(255, 255, 255, 0.72);
+}
+
+.pulse-track i {
+  flex-shrink: 0;
+
+  width: 5px;
+  height: 5px;
+
+  border-radius: 50%;
+
+  background: var(--gradient);
 }
 
 
@@ -1091,6 +1694,7 @@ img {
 
   .header-inner {
     height: 76px;
+
     padding: 0 20px;
   }
 
@@ -1104,6 +1708,7 @@ img {
 
   .mobile-menu-button {
     display: block;
+
     z-index: 60;
   }
 
@@ -1122,7 +1727,6 @@ img {
     flex-direction: column;
 
     justify-content: center;
-
     align-items: flex-start;
 
     gap: 22px;
@@ -1151,7 +1755,6 @@ img {
       var(--font-display);
 
     font-size: 30px;
-
     font-weight: 600;
 
     letter-spacing: -0.03em;
@@ -1164,11 +1767,9 @@ img {
       14px
       22px;
 
-    border-radius:
-      999px;
+    border-radius: 999px;
 
-    background:
-      var(--gradient);
+    background: var(--gradient);
 
     font-family:
       var(--font-body) !important;
@@ -1179,12 +1780,8 @@ img {
     letter-spacing:
       0.05em !important;
 
-    text-transform:
-      uppercase;
+    text-transform: uppercase;
   }
-
-
-  /* MENU ICON */
 
   .mobile-menu-button.active span:first-child {
     top: 21px;
@@ -1261,9 +1858,9 @@ img {
   }
 
   .hero-actions {
-    align-items: stretch;
-
     flex-direction: column;
+
+    align-items: stretch;
 
     max-width: 360px;
   }
@@ -1329,9 +1926,6 @@ img {
     max-width: 650px;
   }
 
-
-  /* PHILOSOPHY */
-
   .philosophy-grid {
     grid-template-columns:
       repeat(2, 1fr);
@@ -1351,11 +1945,112 @@ img {
       1px solid var(--line);
   }
 
-
-  /* QUOTE */
-
   .opportunity-statement {
     margin-top: 110px;
+  }
+
+
+  /* =====================================
+     SESSIONS MOBILE / TABLET
+  ====================================== */
+
+  .sessions-section {
+    padding:
+      100px
+      20px
+      0;
+  }
+
+  .sessions-header {
+    margin-bottom: 55px;
+  }
+
+  .sessions-title-row {
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+  }
+
+  .sessions-title-row h2 {
+    font-size:
+      clamp(
+        50px,
+        13vw,
+        90px
+      );
+  }
+
+  .sessions-title-row > p {
+    max-width: 550px;
+  }
+
+  .session-feature {
+    min-height: 610px;
+  }
+
+  .session-content {
+    padding:
+      28px
+      28px
+      35px;
+  }
+
+  .session-bottom h3 {
+    font-size:
+      clamp(
+        55px,
+        13vw,
+        90px
+      );
+  }
+
+  .circle-link {
+    width: 64px;
+    height: 64px;
+
+    font-size: 23px;
+  }
+
+  .session-secondary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .session-card {
+    border-right: none;
+
+    border-bottom:
+      1px solid var(--line);
+  }
+
+  .session-card:last-child {
+    border-bottom: none;
+  }
+
+  .session-card-image {
+    height: 350px;
+  }
+
+  .sessions-pulse {
+    margin:
+      90px
+      -20px
+      0;
+
+    padding:
+      23px
+      20px;
+  }
+
+  .pulse-track {
+    justify-content: flex-start;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+  }
+
+  .pulse-track::-webkit-scrollbar {
+    display: none;
   }
 
 }
@@ -1390,9 +2085,6 @@ img {
     font-size: 16px;
   }
 
-
-  /* CARDS */
-
   .philosophy-grid {
     grid-template-columns: 1fr;
   }
@@ -1414,9 +2106,6 @@ img {
     font-size: 31px;
   }
 
-
-  /* STATEMENT */
-
   .opportunity-statement {
     margin-top: 90px;
 
@@ -1430,6 +2119,71 @@ img {
         12vw,
         65px
       );
+  }
+
+
+  /* SESSIONS */
+
+  .sessions-title-row h2 {
+    font-size: 13.5vw;
+  }
+
+  .session-feature {
+    min-height: 570px;
+  }
+
+  .session-content {
+    padding:
+      23px
+      20px
+      28px;
+  }
+
+  .session-bottom {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 28px;
+  }
+
+  .session-bottom h3 {
+    font-size: 16vw;
+  }
+
+  .session-description {
+    font-size: 15px;
+  }
+
+  .circle-link {
+    width: 58px;
+    height: 58px;
+  }
+
+  .session-card-image {
+    height: 280px;
+  }
+
+  .session-card-copy {
+    min-height: 320px;
+
+    padding:
+      28px
+      22px
+      36px;
+  }
+
+  .session-card-number {
+    top: 28px;
+    right: 22px;
+  }
+
+  .session-card-copy h3 {
+    font-size: 11vw;
+  }
+
+  .sessions-pulse {
+    margin-top: 70px;
   }
 
 }
